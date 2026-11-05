@@ -3,75 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Course Home Page</title>
-    <meta name="description" content="Course home page for WDD 231: Web Frontend Development. Features course work, certificate information, and responsive layout.">
-    <meta name="author" content="Your Name">
+    <title>WDD 231 - Web Frontend II Course Home Page</title>
+    <meta name="description" content="Official course home page for WDD 231: Web Frontend II. Displays responsive web assignments, custom profile details, and dynamic certificate course filtering.">
+    <meta name="author" content="Prosper Eze">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts API - Required Preconnect & Stylesheet Links -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <!-- Style Sheets -->
+    <!-- Style Sheets (Written customly, no frameworks allowed) -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     
-    <!-- Scripts (Using defer method) -->
+    <!-- External JavaScript Files (Referenced cleanly in head using defer) -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
 </head>
 <body>
 
+    <!-- Header containing logo, student name, and mobile menu controller -->
     <header>
-        <img src="images/logo.svg" alt="Site Logo" width="50" height="50">
-        <span>Your Name</span>
-        <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        <div class="logo-area">
+            <img src="images/pc-display-horizontal.svg" alt="WDD 231 Course Logo Layout" width="50" height="50">
+            <span>Eze Prosper</span>
+        </div>
+        <button id="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
     </header>
 
+    <!-- Responsive navigation framework featuring Wayfinding capabilities -->
     <nav>
         <a href="#" class="active">Home</a>
         <a href="chamber/index.html">Chamber</a>
         <a href="project/index.html">Final</a>
     </nav>
 
+    <!-- Central layout grid containing course content nodes -->
     <main>
         <h1>Home</h1>
         
+        <!-- Assignment repository portal -->
         <section id="course-work">
             <h2>Course Work</h2>
-            <!-- Course cards/details will go here -->
+            <div class="card">
+                <h3>Learning Activities</h3>
+                <p>Tracked portfolio components, styling iterations, and script updates will list here.</p>
+            </div>
         </section>
 
+        <!-- Dynamic programming credentials & credential container block -->
         <section id="certificate-info">
             <h2>Web &amp; Computer Programming Certificate</h2>
+            
+            <!-- JavaScript filtering controllers -->
             <div class="filters">
-                <button id="filter-all">All</button>
-                <button id="filter-wdd">WDD</button>
-                <button id="filter-cse">CSE</button>
+                <button id="filter-all" class="filter-btn active">All Courses</button>
+                <button id="filter-wdd" class="filter-btn">WDD Courses</button>
+                <button id="filter-cse" class="filter-btn">CSE Courses</button>
             </div>
-            <p id="total-credits">Total Credits: 0</p>
-            <div id="course-container">
-                <!-- Courses dynamically loaded via JavaScript -->
-            </div>
+            
+            <!-- Reactive metrics summary output dynamically by reduce() -->
+            <p id="total-credits-wrapper">Displayed Credits: <span id="total-credits">0</span></p>
+            
+            <div id="course-container"></div>
         </section>
 
+        
         <section id="about-me">
             <h2>About Me</h2>
-            <p>Welcome! This is my portfolio page for tracking frontend development coursework.</p>
+            <p>My Name is Prosper Eze, I'm from Nigeria Abia State, I'm currently a student in BYU-Idaho studying software development, I am married to an Akwa Ibom Lady and we are currently serving as YSA couple missionaries in Aba Nigeria Umuola stake, I love singing and playing hymns, I also love playing football as part of my hubbies.</p>
         </section>
     </main>
 
     <footer>
         <div class="social-links">
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-        <p>&copy; <span id="currentYear"></span> | Your Name | Your State/Country</p>
+        <p>&copy; <span id="currentYear"></span> | Prosper Eze | Abia State, Nigeria</p>
         <p id="lastModified"></p>
     </footer>
 
 </body>
 </html>
+
 

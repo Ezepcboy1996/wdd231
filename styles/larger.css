@@ -1,13 +1,56 @@
+/* ==========================================
+   WDD 231 Desktop Layout Enhancements (>= 768px)
+   ========================================== */
+
 @media (min-width: 768px) {
+    /* Hide the interactive mobile layout trigger */
     #menu-toggle {
-        display: none; /* Hide menu button on desktop */
+        display: none;
     }
+
+    /* Transform mobile drawer into horizontal desktop layout menu */
     nav {
-        display: flex !important; /* Force flex display layout */
+        display: flex !important;
         flex-direction: row;
         justify-content: center;
+        background-color: var(--secondary-color);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+
+    nav a {
+        padding: 15px 30px;
+        border-bottom: none;
+        border-right: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Reflow central layout sections into structural columns */
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+
+    h1 {
+        grid-column: 1 / -1; /* Stretch heading item across complete view width */
+        margin-bottom: 0.5rem;
+    }
+
+    #course-work {
+        grid-column: 1 / 2;
+    }
+
+    #about-me {
+        grid-column: 2 / 3;
+    }
+
+    #certificate-info {
+        grid-column: 1 / -1; /* Give full focus width layout to certificate grid */
+    }
+
+    /* Scale dynamic course container target into a multi-column visual grid */
     #course-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 column design layout */
+        grid-template-columns: repeat(3, 1fr); /* Clean 3 column desktop card grid */
     }
 }
+

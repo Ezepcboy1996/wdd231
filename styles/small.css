@@ -1,48 +1,242 @@
-/* Base Mobile Rules */
+/* ==========================================
+   WDD 231 Base Styles (Mobile-First >= 320px)
+   ========================================== */
+
+:root {
+    --primary-color: #1f2d3d;    /* Slate Blue */
+    --secondary-color: #334455;  /* Accent Blue Grey */
+    --accent-color: #00d2ff;     /* Vivid Electric Blue */
+    --completed-bg: #d4edda;     /* Success Pale Green */
+    --completed-text: #155724;   /* Dark Green Text */
+    --text-color: #333333;       /* Body Text */
+    --light-bg: #f9f9f9;         /* Base Card Background */
+    --white: #ffffff;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    background-color: #f0f2f5;
 }
+
+/* --- Header Section --- */
 header {
+    background-color: var(--primary-color);
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    background-color: #1f2d3d;
-    color: white;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-nav {
-    display: none; /* Hidden on small screens unless toggled */
-    flex-direction: column;
-    background-color: #334455;
-}
-nav.open {
+
+.logo-area {
     display: flex;
+    align-items: center;
+    gap: 12px;
 }
+
+.logo-area img {
+    height: auto;
+    max-width: 50px;
+    object-fit: contain;
+}
+
+.logo-area span {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 4px;
+    transition: var(--transition);
+}
+
+#menu-toggle:focus {
+    outline: 2px dashed var(--accent-color);
+}
+
+/* --- Responsive Navigation Framework --- */
+nav {
+    display: none; /* Hidden by default on mobile views */
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
+nav.open {
+    display: flex; /* Injected dynamically by navigation.js */
+}
+
 nav a {
-    color: white;
-    padding: 15px;
+    color: var(--white);
     text-decoration: none;
+    padding: 12px;
     text-align: center;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: var(--transition);
 }
+
+/* Wayfinding and Hover States - No twitching allowed */
 nav a:hover, nav a.active {
-    background-color: #445566;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
 }
+
+/* --- Main Layout Workspace --- */
+main {
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+section {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+
+/* --- Content Cards Architecture --- */
+.card {
+    background-color: var(--light-bg);
+    border: 1px solid #e1e4e8;
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+    margin-top: 1rem;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+/* --- Certificate Filters and Grid Target --- */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 8px 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+#total-credits-wrapper {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
 #course-container {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 10px;
+    grid-template-columns: 1fr; /* Single column default mobile layout */
+    gap: 15px;
+    margin-top: 1rem;
 }
+
+/* Course Grid Elements */
 .course-card {
-    border: 1px solid #ccc;
-    padding: 15px;
-    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    background-color: var(--light-bg);
+    transition: var(--transition);
+    text-align: center;
 }
-/* Visual alignment for completed vs uncompleted courses */
+
+.course-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+}
+
+.course-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Completed Flag State Modifiers */
 .course-card.completed {
-    background-color: #d4edda;
+    background-color: var(--completed-bg);
     border-color: #c3e6cb;
-    color: #155724;
+}
+
+.course-card.completed h3,
+.course-card.completed p {
+    color: var(--completed-text);
+}
+
+/* --- Structural Footer Layout --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
 }
