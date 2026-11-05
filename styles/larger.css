@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none; /* Hide menu button on desktop */
+    }
+    nav {
+        display: flex !important; /* Force flex display layout */
+        flex-direction: row;
+        justify-content: center;
+    }
+    #course-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 column design layout */
+    }
+}
