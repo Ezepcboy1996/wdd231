@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Summit Peak Marketing",
+    "address": "123 Alpine Way, Suite A",
+    "phone": "(555) 019-2834",
+    "website": "https://example.com",
+    "image": "images/bars.png",
+    "membershipLevel": 3,
+    "established": 2014
+  },
+  {
+    "name": "Riverbed Coffee Traders",
+    "address": "456 Main Street",
+    "phone": "(555) 014-9921",
+    "website": "https://example.com",
+    "image": "images/cafe.png",
+    "membershipLevel": 2,
+    "established": 2019
+  },
+  {
+    "name": "Beacon IT Solutions",
+    "address": "789 Tech Boulevard",
+    "phone": "(555) 017-8833",
+    "website": "https://example.com",
+    "image": "images/music.png",
+    "membershipLevel": 1,
+    "established": 2021
+  },
+  {
+    "name": "Green Valley Organics",
+    "address": "101 Farm Center Road",
+    "phone": "(555) 012-3456",
+    "website": "https://example.com",
+    "image": "images/nature.png",
+    "membershipLevel": 2,
+    "established": 2008
+  },
+  {
+    "name": "Vanguard Law Group",
+    "address": "555 Justice Square",
+    "phone": "(555) 015-7766",
+    "website": "https://example.com",
+    "image": "images/team.png",
+    "membershipLevel": 3,
+    "established": 1995
+  },
+  {
+    "name": "Apex Auto Repair",
+    "address": "302 Mechanic Lane",
+    "phone": "(555) 011-4422",
+    "website": "https://example.com",
+    "image": "images/car-maintenance.png",
+    "membershipLevel": 1,
+    "established": 2011
+  },
+  {
+    "name": "Horizon Real Estate",
+    "address": "888 Viewpoint Terrace",
+    "phone": "(555) 016-5544",
+    "website": "https://example.com",
+    "image": "images/road.png",
+    "membershipLevel": 3,
+    "established": 2003
+  }
+]
