@@ -11,35 +11,39 @@
 
     <meta property="og:title" content="Chamber of Commerce Business Directory">
     <meta property="og:description" content="Connect with trusted local businesses and organizational members in our community grid and list directory.">
-    <meta property="og:image" content="images/logo.png">
+    <meta property="og:image" content="https://github.io">
     <meta property="og:url" content="https://github.io">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/larger.css" media="screen and (min-width: 48rem)">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
 </head>
 <body>
 
     <header>
         <div class="logo-area">
             <img src="images/logo.png" alt="Chamber Logo" class="logo">
-            <h1>Community Chamber</h1>
+            <span class="site-title">Community Chamber</span>
         </div>
-        <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
         <nav id="nav-menu">
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="directory-controls">
-            <h2>Business Directory</h2>
+            <h1>Business Directory</h1>
             <div class="view-buttons">
                 <button id="grid-view" class="active" aria-label="Grid View">Grid View 🪟</button>
                 <button id="list-view" aria-label="List View">List View ☰</button>
@@ -62,6 +66,6 @@
         </div>
     </footer>
 
-    <script src="js/directory.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
 </body>
 </html>

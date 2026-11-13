@@ -1,0 +1,38 @@
+/* Tablet & Desktop Refinements */
+@media only screen and (min-width: 48rem) {
+    #menu-toggle {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1.5rem;
+        margin: 0;
+    }
+
+    /* Horizontal List formatting on desktop layouts */
+    .list .member-card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .list .member-card img {
+        display: block;
+        height: 40px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
