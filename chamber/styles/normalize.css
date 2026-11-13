@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Normalize & Base Reset for WDD 231 Chamber Project
+   ========================================================================== */
+
+/* 1. Enforce intuitive box-sizing across all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Prevent font size adjustments after orientation changes in iOS */
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+/* 3. Remove default margin and prevent horizontal overflow on small screens */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Standardize heading sizes and margins so you style them intentionally */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p, figure, blockquote, ul, ol, dl, dd {
+  margin-top: 0;
+}
+
+/* 5. Remove default list styling on navigation/UI lists when needed */
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+/* 6. Make images, SVGs, and media responsive by default */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 7. Inherit fonts and reset styles for form controls and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 8. Standardize link appearance */
+a {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* 9. Ensure hidden attribute works consistently */
+[hidden] {
+  display: none !important;
+}
