@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Home | Community Chamber of Commerce</title>
+    <meta name="description" content="Welcome to the Community Chamber of Commerce. Connect with local businesses, view upcoming events, and grow your network.">
+    <meta name="author" content="Eze Chibueze Prosper">
+    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Community Chamber of Commerce - Home">
+    <meta property="og:description" content="Discover local business events, community weather, and featured Gold and Silver chamber members.">
+    <meta property="og:image" content="https://ezepcboy1996.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:url" content="https://ezepcboy1996.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.jpg" alt="Chamber Logo" class="logo">
+            <span class="site-title">Community Chamber</span>
+        </div>
+        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <!-- 1. Hero Section (Uses <img> tag as required) -->
+        <section class="hero">
+            <img src="images/hero.webp" alt="Local business district banner">
+            <div class="hero-overlay">
+                <h1>Welcome to Community Chamber</h1>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="card events-section">
+                <h2>Current Events</h2>
+                <div class="event-item">
+                    <h3>Monthly Business Networking Mixer</h3>
+                    <p><strong>Date:</strong> December 5, 2026 | 5:30 PM</p>
+                    <p><strong>Location:</strong> Chamber Main Hall</p>
+                    <p>Connect with fellow entrepreneurs and local business leaders.</p>
+                </div>
+                <div class="event-item">
+                    <h3>Small Business Growth Seminar</h3>
+                    <p><strong>Date:</strong> December 14, 2026 | 10:00 AM</p>
+                    <p>Learn practical strategies for local marketing and funding.</p>
+                </div>
+            </section>
+
+            <section class="card weather-section">
+                <h2>Current Weather</h2>
+                <div id="current-weather">
+                    <p>Loading current weather...</p>
+                </div>
+            </section>
+
+            <section class="card forecast-section">
+                <h2>3-Day Forecast</h2>
+                <div id="weather-forecast">
+                    <p>Loading forecast...</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="spotlights-section">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container" class="spotlight-grid">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Community Chamber of Commerce: Abia State, Nigeria</strong></p>
+            <p>100 Chamber Ogbor-Hill, City Centre</p>
+            <p>Phone: (+234) 905-550-100 | info@chamber.org</p>
+        </div>
+        <div class="footer-dev">
+            <p>&copy; <span id="current-year"></span> | Eze Chibueze Prosper | WDD 231</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/home.js" defer></script>
+</body>
+</html>

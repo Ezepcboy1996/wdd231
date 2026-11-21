@@ -129,6 +129,204 @@ nav a:hover {
     display: none;
 }
 
+/* =========================================
+   HOME PAGE LAYOUT & COMPONENTS (MOBILE)
+   ========================================= */
+
+/* Scalable Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background-color: rgba(26, 54, 93, 0.85); /* Matches header #1a365d */
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.hero-overlay h1 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.4rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ecc94b; /* High-contrast gold CTA */
+    color: #1a365d;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.65rem 1.25rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #f6e05e;
+}
+
+/* Events, Weather & Forecast Stacked Grid */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 6px #cbd5e0;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #1a365d;
+    border-bottom: 2px solid #2b6cb0;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.event-item {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.event-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.event-item h3 {
+    margin: 0 0 0.35rem 0;
+    font-size: 1.05rem;
+    color: #2b6cb0;
+}
+
+.event-item p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+/* Weather Styling */
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.weather-main img {
+    background-color: #1a365d;
+    border-radius: 50%;
+    padding: 0.25rem;
+}
+
+.weather-main p {
+    margin: 0.25rem 0;
+}
+
+#weather-forecast p {
+    margin: 0.5rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#weather-forecast p:last-child {
+    border-bottom: none;
+}
+
+/* Member Spotlights Section */
+.spotlights-section {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.spotlights-section h2 {
+    text-align: center;
+    color: #1a365d;
+    margin-bottom: 1rem;
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.spotlight-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px #cbd5e0;
+}
+
+.spotlight-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: #1a365d;
+}
+
+.spotlight-card img {
+    display: block;
+    max-height: 75px;
+    max-width: 150px;
+    object-fit: contain;
+    margin: 0.75rem auto;
+}
+
+.spotlight-card p {
+    margin: 0.35rem 0;
+    font-size: 0.95rem;
+}
+
+.spotlight-card a {
+    color: #2b6cb0;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.spotlight-card a:hover {
+    text-decoration: underline;
+}
+
+.membership-badge {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.badge-gold {
+    background-color: #ecc94b;
+    color: #1a365d;
+}
+
+.badge-silver {
+    background-color: #cbd5e0;
+    color: #1a365d;
+}
+
 /* Footer Layout */
 footer {
     background-color: #2d3748;

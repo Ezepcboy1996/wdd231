@@ -30,6 +30,37 @@
         height: 40px;
     }
 
+    /* =========================================
+       HOME PAGE DESKTOP LAYOUT
+       ========================================= */
+    .home-main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hero-overlay {
+        left: 2rem;
+        right: auto;
+        bottom: 2rem;
+        max-width: 450px;
+        text-align: left;
+        padding: 1.5rem;
+    }
+
+    .hero-overlay h1 {
+        font-size: 1.85rem;
+    }
+
+    /* 3-Column Grid: Events (wider), Current Weather, and 3-Day Forecast */
+    .home-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    /* 3-Column Grid for Gold & Silver Member Spotlights */
+    .spotlight-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     footer {
         display: flex;
         justify-content: space-between;
